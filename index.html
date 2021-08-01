@@ -1,811 +1,179 @@
 <!DOCTYPE html>
-<html>
-
-<Head>
-
-    <Title>Datrs</Title>
-    <!-- Pour reconnaissance accent avec <> explorer -->
-    <meta charset="UTF-8">
-
-    <!-- permet d adpater le site internet à la taille des différents écrans avec width=device-width-->
-    <!-- et initial-scale=1 permet de mettre à l'echelle 1 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fr">
 
 
-    <!-- -----------------------Icon------------------------- -->
-
-    <!-- va chercher le lien sur internet pour les icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-
-    <!-- ------------------Fronts------------------------ -->
-
-    <!-- va chercher le lien sur internet pour le font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
-
-    <!-- Installe la librairie de boot strap - tjrs mettre cetteLigne avant le CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-
-
-    <!-- ---------------------Styles---------------------- -->
-
-    <!-- va chercher le fichier .CSS -->
-    <link rel="stylesheet" href="ressources/CSS/Style.css">
-
-
-</Head>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site en Grid</title>
+  <!-- Import style.css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
 
 <body>
 
-    <!--________________________________________________________Header_________________________________________________-->
-    <header>
+  <div id="grid">
+
+    <!-- Nav -->
+    <nav class="bg-red">
+      <img class="item-logo" src="./assets/images/logo.png" alt="logo">
+      <h1>Star wars</h1>
+
+      <ul class="row">
+        <li class="item"><a href="#nav-home">Home</a></li>
+        <li class="item"><a href="#nav-actu">Actu</a></li>
+        <li class="item"><a href="#nav-form">Formulaire</a></li>
+        <li class="item"><a href="#nav-contact">Contact</a></li>
+      </ul>
+
+    </nav>
+    <!-- Nav -->
 
 
+    <!-- Header -->
+    <header class=" bg-head txt-white" id="nav-home">
 
-        <!-- ---------------------Creation menu NAV------------------------>
+      <h1>Star Wars</h1>
+      <h3 class="br-yellow" > Star Wars est un univers de science fantasy créé par George Lucas. D'abord conçue
+        comme une trilogie
+        cinématographique sortie entre 1977 et 1983.<br>la saga s'accroît ensuite, entre 1999 et 2005, de trois nouveaux
+        films, qui racontent des événements antérieurs à la première trilogie.<br>
+        Cette dernière (épisodes IV, V et VI) ainsi que la deuxième trilogie dite « Prélogie » (épisodes I, II et III)
+        connaissent un immense succès commercial et un accueil critique généralement
+        positif.<br>
+        Dans un souci de cohérence, et pour atteindre un résultat qu'il n'avait pas pu obtenir dès le départ,
+        le créateur de la saga retravaille également les films de sa première trilogie, ressortis en 1997 et 2004 dans
+        de nouvelles versions.
+        Les droits d'auteur de Star Wars sont achetés en 2012 par la Walt Disney Company pour 4,05 milliards de dollars
+        : la sortie au cinéma du septième épisode de la saga et premier de la troisième trilogie (épisodes VII, VIII et
+        IX) est alors planifiée pour 2015. Le Réveil de la Force devient en l'espace d'un mois le plus important succès
+        commercial de la franchise. Il est suivi par Les Derniers Jedi en 2017 et L'Ascension de Skywalker en 2019.
+        Disney annonce en mai 2019 un nouveau film prévu pour 2022 qui ne prendra pas place dans la saga de la famille
+        Skywalker. Par ailleurs, Disney et la société de production Lucasfilm inaugurent en 2016 une série de films
+        dérivés regroupés sous le sigle A Star Wars Story, avec la sortie de Rogue One dont les événements se situent
+        juste avant l'épisode IV. La franchise se développe également sur la plateforme de streaming Disney+, lancée en
+        novembre 2019 avec la série The Mandalorian.
 
-        <!-- "nav" balise pour créer menu -->
-        <!-- "Navbar": menu, "navbar-expand-lg": spécification comme md 12 (lg:large;md meduim) "navbar-light": police caractère du texte (ici noir) "bg-light":backlight du menu--->
-
-        <!-- nav par défaut-->
-        <!-- <nav class="navbar navbar-expand-ld navbar-light bg-light fixed-top"> -->
-
-        <nav class="navbar navbar-expand-md navbar-light myBG fixed-top">
-
-            <div class="container">
-
-                <!-- Ajoute un logo -->
-                <img src="ressources/images/logo.jpg" width="30" height="30" class="d-inline-block align-right"
-                    alt="logo" loading="lazy">
-
-                <!-- Ajoute le nom après le logo -->
-                <a class="navbar-brand" href="lien du site">Darts site</a>
-
-                <!-- Ajoute un bouton pour le responsive -->
-                <!-- class pour le style, type:bouton, data-toggle:fait apparaitre le sous menu quand on clique sur le bouton, data target: affiche le menu qui est dans la div navbar-nav, aria controle fais deplier les sous menus-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MonMenu"
-                    aria-controls="MomMenu" aria-expanded="false" aria-label="Menu pour mobile">
-                    <!-- symbole du bouton menu (burger)-->
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-
-                <div class="collapse navbar-collapse" id="MonMenu">
-                    <!-- C'est ce qui suit après le logo et ml-auto met le titre à gauche et correspond marginleft auto-->
-                    <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link" href="#page">Qui sommes-nous</a>
-                        <a class="nav-item nav-link" href="#produits">Nos produits</a>
-                        <a class="nav-item nav-link" href="#photos">Photos </a>
-                        <a class="nav-item nav-link" href="#packs">Nos packs</a>
-                        <a class="nav-item nav-link" href="#contact">contact</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- autres méthodes utilisés dans boot strapp 
-                --------------------
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                  <a class="navbar-brand" href="#">Hidden brand</a>
-
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                   
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-                </ul>
-                -----------------------
-                -->
-
-        </nav>
-
-
-        <!-- ---------------------Class container1------------------------>
-        <div class="container" id="page">
-
-            <!--------ROW Titre 1 (1 élément de 12 colonnes / Format boot strap)--->
-            <div class="row">
-                <div class="col-md-12 home-title">
-                    <!-- class col-md-12 et home title-->
-                    <!-- Titre   -->
-                    <h1>L'histoire des <span>darts</span></h1> <!-- span sert à découpé la phrase pour garder un mot-->
-                    <!-- Paragraphe -->
-                    <p> Le format de la cible doit être américain, centre de 40 mm.
-                        La fléchette doit être pourvue d'une pointe nylon.<br>La longueur de la fléchette ne doit pas
-                        excéder 20 cm du bout de la pointe à l'extrémité de l'empennage.<br>La largeur de l'empennage ne
-                        doit pas dépasser 3,38 cm, et ne pas avoir plus de quatre ailes à leur empennage.<br>
-                        Le poids de la fléchette complète ne doit pas dépasser 18 grammes.<br>Les fléchettes ne doivent
-                        pas avoir de pointes cassées ou coupées.<br>Le non-respect des normes énoncées entraînera la
-                        perte
-                        de
-                        toutes les manches jouées.<br>Le joueur pourra reprendre son match là où il a été stoppé, avec
-                        des
-                        fléchettes aux normes.<br>Toute contestation concernant le poids des fléchettes doit avoir lieu
-                        avant ou pendant le match, elle ne sera pas permise après le match.</p>
-
-
-                    <!-- Balise de lien pour bouton-->
-                    <!-- Bouton1-->
-                    <a href="#produits" class="btn btn-full"> Produits></a>
-                    <!-- Bouton2-->
-                    <a href="#contact" class="btn btn-gost"> Contacter-nous</a>
-                </div>
-
-            </div>
-
-
-
-        </div>
-        <!--------End ROW Titre 1--->
-        </div>
-        <!-- ---------------------End Class container1------------------------>
+        En accord avec les lois du genre space opera, l'action se déroule « il y a bien longtemps, dans une galaxie très
+        lointaine » et se fonde sur la lutte entre les chevaliers Jedi et les Sith. Le personnage central des deux
+        premières trilogies cinématographiques, Anakin Skywalker, cède à la tentation du côté obscur de la Force pour
+        devenir Dark Vadorb, puis connaît sa rédemption grâce à l'action de son fils, Luke. La troisième trilogie, à
+        partir de l'épisode VII, se déroule trois décennies plus tard avec une nouvelle génération de héros et
+        d'antagonistes. Les nombreux personnages emblématiques, humains et extraterrestres, ont permis de lancer
+        quelques carrières d'acteurs, notamment Harrison Ford et Natalie Portman. L'univers a été décliné dans divers
+        produits dérivés conçus ou non sous l'égide de Lucas : romans, bandes dessinées, jeux vidéo, séries télévisées,
+        etc. L'histoire de la série est ainsi élargie et approfondie par divers médias.
+        Le monde de Star Wars est inspiré de nombreuses œuvres cinématographiques (serials, western, cinéma japonais),
+        mais aussi littéraires (essentiellement d'après les ouvrages d'Edgar Rice Burroughs, de Frank Herbert, de Joseph
+        Campbell, mais aussi d'Isaac Asimov et de J. R. R. Tolkien) et de faits historiques réels. À son tour, le monde
+        créé par George Lucas a influencé une génération de réalisateurs et contribué à la création de nouvelles
+        techniques dans le domaine du cinéma, notamment en ce qui concerne le montage, les bruitages et les effets
+        spéciaux. L'univers de Star Wars a fait l'objet de nombreuses parodies et hommages et dispose également d'une
+        grande communauté de fans qui s'exprime par le biais de diverses manifestations.</h3>
 
     </header>
+    <!-- / Header -->
 
 
+    <!-- Actu -->
+    <section id="actu" class="bg-purple" id="nav-actu">
 
+      <h1 class="br-black ">Actualités</h1>
 
-    <!--__________________________________________________________Section Produits_________________________________________________-->
-    <section>
+      <div class="br-black card-a card">
+        <img src="./assets/images/episode4.jpeg" alt="episode4">
+        <h2>Star Wars, épisode IV :<br> Un nouvel espoir</h2>
+        <h3>C'est le premier opus de la saga Star Wars par sa date de sortie, mais le
+          quatrième selon l'ordre de l'histoire. Il est le premier volet de la trilogie originale qui
+          est constituée également des films L'Empire contre-attaque et Le Retour du Jedi. </h3>
+        <h4>Année de sortie 1977</h4>
+      </div>
 
-        <!-- ---------------------Class container2------------------------>
-        <div class="container" id="produits">
+      <div class="br-black card-b card">
+        <img src="./assets/images/episode5.jpeg" alt="episode5">
+        <h2>Star Wars, épisode V :<br> L'Empire contre-attaque</h2>
+        <h3>C'est le deuxième opus de la saga Star Wars par sa date de sortie, mais le
+          cinquième selon l'ordre de l'histoire. Il est le deuxième volet de la trilogie originale qui
+          est constituée également des films Un nouvel espoir et Le Retour du Jedi.</h3>
+        <h4>Année de sortie 1980</h4>
+      </div>
 
-            <!--------ROW Titre 2 (1 élément de 12 colonnes / format boot strap)--->
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Nos produits</h2>
-                </div>
-            </div>
-            <!--------End ROW Titre 2 --->
-
-
-
-            <!--ROW "Corps" (2 élements pour un total de 12 colonnes / format boot strap)--------->
-            <div class="row">
-
-                <!-- Element ROW Image-->
-                <div class="col-md-7">
-                    <!-- image du produit -->
-                    <img src="ressources/images/Flechettes.jpg" alt="tea" class="produits-img">
-                </div>
-                <!-- Fin ROW Image -->
-
-
-                <!-- Element ROW Texte -->
-                <div class="col-md-5">
-
-                    <!-------------------------------Produit 1 --------------------------------->
-                    <div class="produits-plus">
-
-                        <!-- ROW Produit-1 (12 colonnes)-->
-                        <div class="row">
-
-                            <!-- Icon1 (2 colonnes sur 12)-->
-                            <div class="col-md-2">
-                                <div class="produits-icon">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                            </div>
-                            <!-- End Icon1 -->
-
-                            <!-- Text1 (10 colonnes sur 12)-->
-                            <div class="col-md-10">
-                                <h3>Promotion</h3>
-                                <p>Pour une livraison en France Métropolitaine. Voir Conditions Générales de
-                                    Ventes pour plus d'informations.</p>
-                            </div>
-                            <!-- End texte1 -->
-
-                        </div>
-                        <!-- End ROW Produit-1 -->
-                    </div>
-                    <!-- -----------------------------End Produit 1 ------------------------------- -->
-
-
-
-
-                    <!-- -----------------------------Produit 2 ------------------------------- -->
-                    <div class="produits-plus">
-
-                        <!-- ROW Produit-2 (12 colonnes)-->
-                        <div class="row">
-
-                            <!-- Icon2 (2 colonnes sur 12)-->
-                            <div class="col-md-2">
-                                <div class="produits-icon">
-                                    <i class="fas fa-award"></i>
-                                </div>
-
-                            </div>
-                            <!-- End Icon2-->
-
-                            <!-- Text2 (10 colonnes sur 12)-->
-                            <div class="col-md-10">
-                                <h3>Flechettes et Accessoires</h3>
-                                <p>Fut, Shaft et ailettes</p>
-                            </div>
-                            <!-- End Text2 -->
-
-                        </div>
-                        <!-- End ROW Produit-2 -->
-                    </div>
-                    <!-------------------------------End Produit 2 --------------------------------->
-
-
-
-                    <!-------------------------------Produit 3 --------------------------------->
-                    <div class="produits-plus">
-
-                        <!-- ROW Produit-3 (12 colonnes)-->
-                        <div class="row">
-
-                            <!-- Icon3 (2 colonnes sur 12)-->
-                            <div class="col-md-2">
-                                <div class="produits-icon">
-                                    <i class="fas fa-medal"></i>
-                                </div>
-                            </div>
-                            <!-- End Icon3--
-
-                            -- Text3 (10 colonnes sur 12)-->
-                            <div class="col-md-10">
-                                <h3>Cibles</h3>
-                                <p>Découvrez une large sélection de cibles.</p>
-                            </div>
-                            <!-- End Text3 -->
-
-
-                        </div>
-                        <!-- End ROW Produit-3 -->
-                    </div>
-                    <!-------------------------------End Produit 3 --------------------------------->
-
-
-                </div>
-                <!-- End ROW Texte-->
-            </div>
-            <!-- End ROW "Corps"-->
-        </div>
-        <!-- ---------------------End Class container2------------------------>
+      <div class="br-black card-c card ">
+        <img src="./assets/images/episode6.jpeg" alt="episode6">
+        <h2>Star Wars, épisode VI :<br> Le Retour du Jedi</h2>
+        <h3>C'est le troisième opus de la saga Star Wars par sa date de sortie, mais le
+          sixième selon l'ordre de l'histoire. Il est le dernier volet de la trilogie originale qui est
+          constituée également des films Un nouvel espoir et L'Empire contre-attaque.</h3>
+        <h4>Année de sortie 1983</h4>
+      </div>
 
     </section>
-
-
-
-
-
-    <!--__________________________________________________________Section Famille Darts_________________________________________________-->
-    <section class="famille-darts">
-        <!-- ---------------------Class container3------------------------>
-        <div class="container">
-
-            <!--------ROW Titre 3 (1 élément de 12 colonnes / format boot strap)--->
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Famille de Produits</h2>
-                </div>
-            </div>
-            <!--------End ROW Titre 3 --->
-
-            <!--ROW "Corps" (4 élements pour un total de 12 colonnes / format boot strap)--------->
-            <div class="row">
-
-
-                <!-- 1 -->
-                <div class="col-md-4">
-
-                    <div class="famille-details">
-
-                        <div class="cadre">
-                            <img src="ressources/images/jeux Flechettes.jpg">
-                        </div>
-                        <div>
-                            <h4>Jeux de fléchettes</h4>
-                            <p>Tous les jeux de fléchettes :
-                                Fléchettes pointes acier pour cibles traditionnelles en sisal
-                                Fléchettes pointes nylon pour cible électronique
-                                Nombreuses pièces détachées pour personnaliser vos darts et les adapter à votre
-                                lancer.).
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- End 1 -->
-
-                <!-- 2 -->
-                <div class="col-md-4">
-
-                    <div class="famille-details">
-
-                        <div class="cadre">
-                            <img src="ressources/images/Accessoires.jpg">
-                        </div>
-
-                        <div>
-                            <h4>Accessoires</h4>
-                            <p>-Le fût est le cœur de la fléchette. Son matériau, son poids et ses dimensions influent
-                                grandement sur la capacité du joueur à répéter ses trajectoires.<br>
-                                -La tige, également appelée shaft est lecentre de gravité de la fléchette.<br>
-                                -L'ailette, pour stabiliser les volées.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- End 2 -->
-
-
-                <!-- 3 -->
-                <div class="col-md-4">
-
-                    <div class="famille-details">
-
-                        <div class="cadre">
-                            <img src="ressources/images/Cible.jpg">
-
-                        </div>
-
-                        <div>
-                            <h4>Cibles</h4>
-                            <p>Cible électronique ou traditionnelle :
-                                Deux types de jeu de fléchettes existent : le jeu sur cible électronique avec fléchettes
-                                à
-                                pointe plastique, ou le jeu sur cible traditionnelle avec des fléchettes à pointes
-                                acier.
-                                Avant de choisir votre matériel, il vous faudra en premier lieu définir sur quel type de
-                                cible vous désirez jouer.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- End 3 -->
-
-            </div>
-            <!--End ROW "Corps"--->
-        </div>
-        <!-- ---------------------End Class container3------------------------>
-
-
-
-
-
-    </section>
-
-
-
-    <!--______________________________________________________Section Galeries photos_________________________________________________-->
-    <section>
-
-
-        <div class="container" id="photos">
-
-
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Galeries photos</h2>
-                </div>
-            </div>
-
-
-
-            <div class="row">
-                <div class="col-md-4">
-
-
-                    <div class="galerie-img" style="background-image:url(ressources/images/galerie/photo1.jpg)">
-                        <div class="galerie-title">
-                            <h4>Jeux de flechettes</h4>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="col-md-8">
-                    <div class="galerie-img" style="background-image:url(ressources/images/galerie/photo2.jpg)">
-                        <div class="galerie-title">
-                            <h4>Championnats du monde de fléchettes: Michael van Gerwen - Peter Wright</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="galerie-img" style="background-image:url(ressources/images/galerie/photo3.jpg)">
-                        <div class="galerie-title">
-                            <h4>Cibles en feu</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="galerie-img" style="background-image:url(ressources/images/galerie/photo4.jpg)">
-                        <div class="galerie-title">
-                            <h4>La rochelle</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="galerie-img" style="background-image:url(ressources/images/galerie/photo5.jpg)">
-                        <div class="galerie-title">
-                            <h4>Darts Live</h4>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-    <!--______________________________________________________Section client_________________________________________________-->
-    <section class="clients">
-
-
-        <div class="container" id="packs">
-
-
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>avis clients</h2>
-                </div>
-            </div>
-
-
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="client-profil">
-                        <!-- blockquote est une balise commentaire -->
-                        <blockquote>
-                            <p>Le meilleur site de Darts!!</p>
-                        </blockquote>
-                        <!-- cite est une balise pour mettre le nom de l'auteur du commentaire -->
-                        <cite> <img src="ressources/images/clients/emilie.jpg"> Emilie de chateau en Blaye </cite>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="client-profil">
-                        <!-- blockquote est une balise commentaire -->
-                        <blockquote>
-                            <p>Matos au top.
-                                Livraison rapide.</p>
-                        </blockquote>
-                        <!-- cite est une balise pour mettre le nom de l'auteur du commentaire -->
-                        <cite> <img src="ressources/images/clients/blaise.jpg"> BLaise de Charente </cite>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="client-profil">
-                        <!-- blockquote est une balise commentaire -->
-                        <blockquote>
-                            <p>Top.Beaucoup de choix dans les accessoires.</p>
-                        </blockquote>
-                        <!-- cite est une balise pour mettre le nom de l'auteur du commentaire -->
-                        <cite> <img src="ressources/images/clients/julia.jpg"> Julia de Corse </cite>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--______________________________________________________Section TABLEAU DES PRIX_________________________________________________-->
-    <section>
-
-
-        <div class="container">
-
-
-
-
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Nos packs</h2>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <!-- pack1 -->
-                <div class="col-md-4">
-                    <div class="pack">
-                        <div class="pack-title">
-                            <h3> Basique</h3>
-                            <h4>Gratuit</h4>
-                            <p>30 jours d'essai</p>
-
-
-
-                            <div class="pack-content">
-                                <!-- "Ul" balise pour faire liste/tableau -->
-                                <ul>
-                                    <!-- "il" balise non chiffrée et "ol" chiffrée (1-2-3 -->
-                                    <li> <i class="fas fa-check-circle"></i> 5 ailettes nylon</li>
-                                    <li> <i class="fas fa-times-circle"></i> 10 fut au choix</li>
-                                    <li> <i class="fas fa-times-circle"></i> 1 serviette</li>
-                                    <li> <i class="fas fa-times-circle"></i> 1 étui de rangement</li>
-                                </ul>
-                            </div>
-
-                            <div class="pack-signup">
-                                <a ref="/" class="btn btn-pack"> Je m'inscris</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- pack2 -->
-                <div class="col-md-4">
-                    <div class="pack pack-premium">
-                        <div class="pack-title">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Premium</h3>
-                                    <h4>10€<span>/mois</span></h4>
-                                    <p>pack découverte</p>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <p class="pack-premium-title">Le plus demandé</p>
-                                </div>
-
-                            </div>
-
-
-
-
-                            <div class="pack-content">
-                                <!-- "Ul" balise pour faire liste/tableau -->
-                                <ul>
-                                    <!-- "il" balise non chiffrée et "ol" chiffrée (1-2-3 -->
-                                    <li> <i class="fas fa-check-circle"></i> 5 ailettes nylon</li>
-                                    <li> <i class="fas fa-check-circle"></i> 10 fut au choix</li>
-                                    <li> <i class="fas fa-times-circle"></i> 1 serviette</li>
-                                    <li> <i class="fas fa-times-circle"></i> 1 étui de rangement</li>
-                                </ul>
-                            </div>
-
-                            <div class="pack-signup">
-                                <a ref="/" class="btn btn-pack "> Je m'inscris</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- pack3 -->
-                <div class="col-md-4">
-                    <div class="pack pack-elite">
-                        <div class="pack-title">
-                            <h3> Pack complet</h3>
-                            <h4>30€<span>/mois</span></h4>
-                            <p>+ cadeau offert</p>
-
-
-
-                            <div class="pack-content">
-                                <!-- "Ul" balise pour faire liste/tableau -->
-                                <ul>
-                                    <!-- "il" balise non chiffrée et "ol" chiffrée (1-2-3 -->
-                                    <li> <i class="fas fa-check-circle"></i> 5 ailettes nylon</li>
-                                    <li> <i class="fas fa-check-circle"></i> 10 fut au choix</li>
-                                    <li> <i class="fas fa-check-circle"></i> 1 serviette</li>
-                                    <li> <i class="fas fa-check-circle"></i> 1 étui de rangement</li>
-                                </ul>
-                            </div>
-
-                            <div class="pack-signup">
-                                <a ref="/" class="btn btn-pack "> Je m'inscris</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!--______________________________________________________Section CONTACT_________________________________________________-->
-    <section>
-
-
-        <div class="container" id="contact">
-
-
-            <div class="row">
-
-                <!-- Formulaire -->
-                <div class="col-md-8 template">
-
-                    <div class="row">
-                        <!-- titre -->
-                        <div class="col-md-12">
-                            <h2>Conctatez-nous</h2>
-                            <p> Pour toutes vos questions concernant le service client, comptabilité ou SAV,
-                                contactez-nous. </p>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <!-- Phone -->
-                        <div class="col-md-4">
-                            <div class="phone">
-                                <p><i class="fas fa-phone"></i> 02 43 56 54 41</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-8">
-                            <!-- Adress -->
-                            <div class="adress">
-                                <p><i class="fas fa-map-marker-alt"> </i> 50 rue des planthes, 341220 Darts en
-                                    Champagne</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- "form" balise pour faire des formulaires -->
-                    <form>
-
-                        <div class="row">
-
-                            <!-- Nom -->
-
-                            <div class="col-md-6">
-                                <div class="contact-form">
-                                    <!-- "Label" balise pour faire des label ds formulaires -->
-                                    <label>Nom:</label>
-                                    <!-- "input" balise pour faire des entrées ds formulaires etun "id" unique pour récupérer cette entrée -->
-                                    <input type="text" id="name" placeholder="Nom">
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="contact-form">
-                                    <label>Email:</label>
-                                    <!-- type "email" permet d'avoir message d"erreur si format NOK -->
-                                    <!-- "placeholder" met un texte dans le label -->
-                                    <Input type="email" id="email" placeholder="votre email">
-                                    <!-- "small" met un texte en plus -->
-                                    <div class="contact-form-small">
-                                        <small>Vous ne recevrez pas de PUB</small>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="row">
-                            <!-- service contact-->
-                            <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label>Selectionner le service:</label>
-                                    <!-- "select" balise pour faire choix multiple -->
-                                    <select name="" id="service">
-                                        <!-- "option" balise pour inserer des choix -->
-                                        <option>Service client</option>
-                                        <option>Service comptabilité</option>
-                                        <option>SAV</option>
-                                    </select>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <!-- message -->
-                            <div class="col-md-12">
-                                <div class="contact-form">
-                                    <label>Votre message:</label>
-                                    <!-- "textarea" balise pour inserer une input text et "row" choisit le nb ligne affichage de la saisie du texte -->
-                                    <textarea id="message" rows="3" class="contact-message"></textarea>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <!-- bouton envoyer -->
-                            <div class="col-md-12">
-                                <button class="btn btn-contact">Envoyer</button>
-                            </div>
-                        </div>
-
-                    </form>
-
-                </div>
-
-                <!-- carte -->
-                <div class="col-md-4 map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.445280336629!2d0.19546231550436058!3d48.005106568357256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e288d20f39a74d%3A0x2b0190d80c0d68a6!2sPalais%20des%20Th%C3%A9s!5e0!3m2!1sfr!2sfr!4v1593259412637!5m2!1sfr!2sfr"
-                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0"></iframe>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!--______________________________________________________FOOTER_________________________________________________-->
-
-    <footer>
-        <div class="copyright">
-            <p>Site Darts - 2019. <a href="/">Mentions legales</a> </p>
-
-        </div>
+    <!-- /Actu -->
+
+
+    <!-- Form -->
+    <form class="bg-green" id="nav-form">
+
+      <h2 class="br-blue">Contactez-nous</h2>
+
+      <div class="name">
+        <label>Name:</label>
+        <input class="ratio" type="text" id="name" placeholder="Name">
+      </div>
+
+      <div class="mail">
+        <label class="ratio" for="">Mail:</label>
+        <input class="ratio" type="email" id="email" placeholder="Email">
+        <!-- <input type="email" id="email" placeholder="Email" style="width:100px;"> -->
+      </div>
+
+      <div class="sujet">
+        <label class="ratio" for="">Sujet:</label>
+        <input class="ratio" type="text" id="subject" placeholder="Sujet">
+      </div>
+
+      <div class="comment">
+        <label class="ratio" for="">Commentaire:</label>
+        <textarea class="ratio" name="comment" id="comment" cols="60" rows="5"></textarea>
+      </div>
+
+      <button class="btn">Envoyer</button>
+
+    </form>
+    <!-- / Form -->
+
+    <!-- Footer -->
+    <footer class="bg-yellow" id="nav-contact">
+
+      <h2>Site Grid 2020</h2>
+
+      <div class="br-black foo-a contact">
+        <h2 class="bg-white br-blue">Contact</h2>
+        <h3 class="h3-1">Nom: Star</h3>
+        <h3 class="h3-2">Prenom: Wars</h3>
+        <h3 class="h3-3">Email: star.Wars@orange.fr</h3>
+      </div>
+
+      <div class="br-black foo-b map">
+        <h2 class="bg-white br-blue">Map</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.9408536413302!2d0.1870492160072429!3d47.995530179212324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e288cb55f997bd%3A0x2ebf1ae80bce877f!2sArinfo%20Le%20Mans!5e0!3m2!1sfr!2sfr!4v1594107543071!5m2!1sfr!2sfr"
+          width="400" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+
+      <div class="br-black foo-c social">
+        <h2 class="bg-white br-blue">Social</h2>
+        <h3 class="h3-1">N° Siret: 154215412541</h3>
+        <h3 class="h3-2">Adresse: 8 rue des etoiles 72000 le mans</h3>
+        <h3 class="h3-3">Tel: 02456363520</h3>
+      </div>
 
     </footer>
-    <!--______________________________________________________END FOOTER_________________________________________________-->
-
-
-    <!--______________________________________________________SCRIPT pour MENU NAVBAR_________________________________________________-->
-    <!-- Install ces sripts pour aue les animations fonctionnent-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
-
-
+    <!-- Footer -->
+  </div>
 
 </body>
-
-
 
 </html>
