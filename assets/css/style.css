@@ -1,0 +1,545 @@
+/*
+ * Css create by wil
+ *
+ *
+ * color themes:
+ *
+ *  primary: #77777
+ *  secondary: #00000
+ *
+ ****************/
+
+
+
+/* Text-color */
+/* ************************************************** */
+.txt-green {
+    color: green
+}
+
+.txt-red {
+    color: red
+}
+
+.txt-blue {
+    color: blue
+}
+
+.txt-yellow {
+    color: yellow
+}
+
+.txt-purple {
+    color: rgba(128, 0, 128, 1)
+}
+
+.txt-cyan {
+    color: cyan
+}
+
+.txt-white {
+    color: white
+}
+
+/* ************************************************** */
+/* /Text-color */
+
+
+/* Border */
+/* ************************************************** */
+.br-green {
+    border: solid 2px green
+}
+
+.br-red {
+    border: solid 2px red
+}
+
+.br-blue {
+    border: solid 2px blue
+}
+
+.br-yellow {
+    border: solid 2px yellow
+}
+
+.br-purple {
+    border: solid 2px rgba(128, 0, 128, 1)
+}
+
+.br-cyan {
+    border: solid 2px cyan
+}
+
+.br-white {
+    border: solid 2px white
+}
+
+.br-black {
+    border: solid 2px black
+}
+
+/* ************************************************** */
+/* /Border */
+
+
+/* Background */
+/* ************************************************** */
+.bg-green {
+    background-color: green
+}
+
+.bg-red {
+    background-color: red
+}
+
+.bg-blue {
+    background-color: blue
+}
+
+.bg-yellow {
+    background-color: yellow
+}
+
+.bg-purple {
+    background-color: rgba(128, 0, 128, 0.8)
+}
+
+.bg-cyan {
+    background-color: cyan
+}
+
+.bg-pink {
+    background-color: pink
+}
+
+.bg-white {
+    background-color: white
+}
+
+.bg-rosybrown {
+    background-color: rosybrown
+}
+
+header {
+    width: 100%;
+    height: auto;
+
+    background-image: linear-gradient(rgba(44, 0, 242, 0.4),
+            rgba(7, 230, 211, 0.6)), url(../images/header.jpg);
+
+    background-position: center;
+    /* adapte l'image à l'ecran */
+    background-size: cover;
+
+}
+
+/* ************************************************** */
+/* /Background */
+
+
+
+
+/*------------------------
+ Flex Justify-content
+
+flex-start : Les éléments s'alignent au côté gauche du conteneur et en haut.
+flex-end : Les éléments s'alignent au côté droit du conteneur.
+center : Les éléments s'alignent au centre du conteneur.
+space-between : Les éléments s'affichent avec un espace égal entre eux.
+space-around : Les éléments s'affichent avec un espacement égal à l'entour d'eux.
+-------------------------*/
+
+.cont-flx-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cont-flx-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cont-flx-center {
+    display: flex;
+    justify-content: center;
+}
+
+.cont-flx-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-flx-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* -------------------------
+Flex align-items
+
+flex-start : Les éléments s'alignent au haut du conteneur et à gauche.
+flex-end : Les éléments s'alignent au bas du conteneur.
+center : Les éléments s'alignent au centre vertical du conteneur.
+baseline : Les éléments s'alignent à la ligne de base du conteneur.
+stretch : Les éléments sont étirés pour s'adapter au conteneur
+----------------------- */
+.cont-al-item-start {
+    align-items: flex-start;
+}
+
+.cont-al-item-end {
+    align-items: flex-end;
+}
+
+.cont-al-item-center {
+    align-items: center;
+}
+
+.cont-al-item-baseline {
+    align-items: baseline;
+}
+
+.cont-al-item-stretch {
+    align-items: stretch;
+}
+
+
+/* -------------------------
+Flex direction
+
+row : Les éléments sont disposés dans la même direction que le texte.
+row-reverse : Les éléments sont disposés dans la direction opposée au texte.
+column : Les éléments sont disposés de haut en bas.
+column-reverse : Les éléments sont disposés de bas en haut. 
+----------------------------*/
+.cont-row {
+    display: flex;
+    flex-direction: row
+}
+
+.cont-row-reverse {
+    display: flex;
+    flex-direction: row-reverse
+}
+
+/* rangement par colonne */
+.cont-column {
+    display: flex;
+    flex-direction: column
+}
+
+.cont-column-reverse {
+    display: flex;
+    flex-direction: column-reverse
+}
+
+/* -------------------------
+Flex Wrap
+
+nowrap : Tous les éléments sont tenus sur une seule ligne.
+wrap : Les éléments s'enveloppent sur plusieurs lignes au besoin.
+wrap-reverse : Les éléments s'enveloppent sur plusieurs lignes dans l'ordre inversé.
+---------------------------- */
+.cont-nowrap {
+    display: flex;
+    flex-wrap: nowrap
+}
+
+.cont-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont-wrap-reverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+
+/* -------------------------
+Flex-Flow 
+
+Les deux propriétés flex-direction et flex-wrap sont utilisées tellement souvent ensembles que le raccourci flex-flow a été créé pour les combiner. Ce raccourci accepte les valeurs des deux propriétés séparées par un espace.
+Par exemple, vous pouvez utiliser flex-flow: row wrap pour configurer les colonnes et les faire s'envelopper.
+Essayez d'utiliser flex-flow pour répéter le niveau précédent.
+---------------------------- */
+.cont-flow-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cont-flow-column {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.cont-flow-row-reverse {
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+}
+
+.cont-flow-colum-reverse {
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+}
+
+
+
+/* -------------------------
+align-content 
+
+flex-start : Les lignes sont amassées dans le haut du conteneur.
+flex-end: Les lignes sont amassées dans le bas du conteneur.
+center : Les lignes sont amassées dans le centre vertical du conteneur.
+space-between : Les lignes s'affichent avec un espace égal entre eux.
+space-around : Les lignes s'affichent avec un espace égal autour d'eux.
+stretch : Les lignes sont étirées pour s'adapter au conteneur.
+
+Ceci peut être mélangeant, mais align-content détermine l'espace entre les lignes, 
+alors que align-items détermine comment les éléments dans leur ensemble sont alignées à l'intérieur du conteneur. 
+Quand il n'y a qu'une seule ligne, align-content n'a aucun effet. 
+-------------------------*/
+.cont-al-ctnt-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cont-al-ctnt-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.cont-al-ctnt-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.cont-al-ctnt-space-between {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.cont-al-ctnt-space-around {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+
+
+/* Body */
+/* ************************************************** */
+/* Body (default)*/
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(77, 74, 74);
+    height: auto;
+    width: 100%;
+}
+
+/* / Body */
+/* ************************************************** */
+
+
+
+/* Text */
+/* ************************************************** */
+a {
+    margin: 0;
+    text-decoration: none;
+    /* enleve la barre dessous le texte du lien*/
+    color: inherit;
+    /* inherit enlève le style dpar défaut du paragraphe et prens celui du parent*/
+}
+
+.txt-left {
+    text-align: left;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.title-nav {
+    margin: 0 15px;
+}
+
+
+/* / Text */
+/* ************************************************** */
+
+
+/* Form */
+/* ************************************************** */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.ratio {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* / Form */
+/* ************************************************** */
+
+
+/* ITEM */
+/* ************************************************** */
+
+.cadre {
+    min-width: 150px;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    /* min-width: 100px; */
+    /* width: 40%; */
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+}
+
+.item-1 {
+    min-width: 100px;
+    width: 30%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+.item-2 {
+    min-width: 100px;
+    width: 30%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+.item-3 {
+    min-width: 100px;
+    width: 30%;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+.item-logo {
+    width: 15%;
+    margin: 2px;
+    padding: 2px;
+}
+
+/* / ITEM */
+/* ************************************************** */
+
+
+/* BUTTON */
+/* ************************************************** */
+
+.btn {
+    padding: 5px;
+    margin: 5px;
+}
+
+/* / BUTTON */
+/* ************************************************** */
+
+
+
+/* IMG */
+/* ************************************************** */
+
+.cadre {
+    width: auto;
+    height:auto;
+     /* margin: 5px;
+    padding: 5px; */
+}
+
+.cadre img {
+    width: 100%;
+
+}
+
+.map-responsive {
+    width: 300px;
+    height: auto;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+/* IMG */
+/* ************************************************** */
+
+
+
+/* Responcive */
+/*
+ * Pour gèré le responcive de Flex il faut jouer avec la function Wrap et la taille des items
+ *
+ * Contrairement à grid nous ne sommes pas obligé de geré les media query pour les contents
+ *
+ * 
+ *
+ *
+ *
+ *
+ *  
+ */
+
+
+
+@media screen and (max-width: 640px) {
+
+
+    .item-1 {
+        min-width: 20%;
+        width: 80%;
+        height: auto;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .item-2 {
+        min-width: 20%;
+        width: 80%;
+        height: auto;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .item-3 {
+        min-width: 20%;
+        width: 80%;
+        height: auto;
+        margin: 5px;
+        padding: 5px;
+    }
+
+}
