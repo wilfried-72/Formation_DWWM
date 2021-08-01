@@ -1,0 +1,142 @@
+//******************************
+//  Site Sass
+//  Created: Wil 
+//******************************
+
+// --------------------------------------------
+// Style color
+
+@import "function.sass"
+
+// Import le fichier variable
+@import "variables.sass"
+$list-color: blue green red yellow purple cyan pink white black
+
+// creer class .br-color; border color avec la fonction each et la liste color declaree dans le fichier varaibles.sass
+@each $i in $list-color
+  .br-#{$i}
+    border: solid 2px #{$i}
+
+// creer class .bg-color; background color
+@each $i in $list-color
+  .bg-#{$i}
+    background-color: #{$i}
+
+// creer class .txt-color; text colors
+@each $i in $list-color
+  .txt-#{$i}
+    color: #{$i}
+// / Style color
+//--------------------------------------------
+
+//--------------------------------------------
+// Body
+body
+  padding: 0
+  margin: 0
+  width: 100%
+  height: auto
+
+h1,h2,h3,.h3-1,.h3-2,.h3-3
+  align-self: center
+  text-align: center
+  padding: 5px 5px 5px 5px
+
+li
+  list-style: none
+
+.h3-1,.h3-2,.h3-3
+  color: $black
+  &:hover
+    color: $purple
+
+// creer background image
+.bg-head
+  width: 100%
+  height: auto
+  background-image: url(../images/header.jpeg)
+  background-position: center
+  background-size: cover
+
+// importe le fichier body.sass pour le mixin boby-grid
+@import "body.sass"
+@include body-grid
+
+// importe le fichier nav.sass pour le mixin nav-grid
+@import "nav.sass"
+@include nav-grid
+
+// importe le fichier header.sass pour le mixin header-grid
+@import "header.sass"
+@include header-grid
+
+// meme princique que ci-dessus
+@import "actu.sass"
+@include actu-grid
+
+// meme princique que ci-dessus
+@import "form.sass"
+@include form-grid
+
+// meme princique que ci-dessus
+@import "footer.sass"
+@include foot-grid
+
+// / Body
+// --------------------------------------------
+
+//--------------------------------------------
+// Responsive
+@for $i from 610 through 630
+  $bp:fct-response($i)
+  @media screen and (max-width: #{$bp}px)
+    .row
+      display: flex
+      flex-direction: column
+      align-items: center
+    // creer le grid nav
+    nav>img 
+      width: 20%
+      height: auto
+      grid-area: nav-logo
+
+    #grid>nav
+      display: grid
+      width: 100%
+      height: auto
+      grid-template-columns: auto
+      grid-auto-rows: auto
+      grid-template-areas: "nav-logo" "t-nav" "ul-nav" "btn-nav"
+
+    // creer le grid actu
+    #grid>#actu
+      display: grid
+      width: 100%
+      height: auto
+      grid-template-columns: auto
+      grid-row-gap: 5px
+      grid-auto-rows: auto
+      grid-template-areas: ". t-actu t-actu t-actu ." ". a a a ." ". b b b ." ". c c c ."
+
+    // creer le grid form
+    #grid>form
+      display: grid
+      width: 100%
+      height: auto
+      grid-template-columns: 1fr 70px 1fr 1fr 70px 1fr
+      grid-template-rows: auto
+      grid-row-gap: 5px
+      grid-template-areas: ". t-form t-form t-form t-form ." ". . in-name in-mail . ."  ". . t-suj t-suj . ." ". . t-text t-text . ." ". t-btn . . . ."
+
+    // creer le grid footer
+    #grid>footer
+      display: grid
+      width: 100%
+      height: auto
+      grid-template-columns: 10% 40% 40% 10%
+      grid-row-gap: 5px
+      grid-auto-rows: auto
+      grid-template-areas: ". t-foo t-foo ." ". part-a part-a ." ". part-b part-b ." ". part-c part-c ."
+
+// // / Responsive
+//-------------------------------------------

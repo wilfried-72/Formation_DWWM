@@ -1,0 +1,63 @@
+@import "variables.sass"
+// creer le template grid actu
+$list-actu: h1 a b c
+
+// mixin actu-grid
+@mixin actu-grid
+
+// Pour chaque item de la list des attributs sont donnés à la classe ou à la balise via la condition if  
+@each $i in $list-actu
+    @if ($i == h1)
+        #actu>#{$i}
+            grid-area: t-actu
+    @else
+        #actu>.card-#{$i}
+            grid-area: #{$i}
+
+// creer le grid
+#grid>#actu
+    display: grid
+    width: 100%
+    height: auto
+    grid-column-gap: 5px
+    grid-template-columns: 15px 1fr 1fr 1fr 15px
+    grid-template-rows: auto
+    grid-template-areas: ". . t-actu . ." ". a b c ."
+
+
+// Pour chaque item de la list des attributs sont donnés à la classe ou à la balise via la condition if  
+$list-card: img h2 h3 h4
+@each $i in $list-card
+    @if ($i == img)
+        .card>#{$i}
+            padding: 5px 5px 5px 5px
+            justify-items: center
+            align-self: center
+            width: 100%
+            height: auto
+            grid-area: img
+    @else if ($i == h2)
+        .card>#{$i}
+            background-color: white
+            color: blue
+            grid-area: title
+    @else if ($i == h3)
+        .card>#{$i}
+            background-color: white
+            color: blueviolet
+            grid-area: desc
+    @else if ($i == h4)
+        .card>#{$i}
+            background-color: white
+            grid-area: date
+
+// creer le grid
+#actu>.card
+    display: grid
+    width: 100%
+    height: auto
+    grid-column-gap: 5px
+    grid-template-columns: 5px 1fr 1fr 1fr 5px
+    grid-row-gap: 5px
+    grid-auto-rows: minmax(min-content, max-content)
+    grid-template-areas: " . img img img ." ". title title . . " ". desc desc desc ." " . . . date ."
